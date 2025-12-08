@@ -1,0 +1,153 @@
+JAVA
+
+**** Fundamentos da Linguagem de Programação Java *****
+
+---------------------------------------------------------------------------------------------------------------
+
+Trabalhando com Operadores Bitwise (Bit-a-Bit) -------------
+
+public class Main {
+
+    public static void main(String[]args) {
+    var value1 = 6;
+    var binary1 = Integer.toBinaryString(value1);
+    System.out.printf("Primeiro número da operação %s (representação binária %s)\n", value1, binary1);
+    var value2 = 5;
+    var binary2 = Integer.toBinaryString(value2);
+    System.out.printf("Segundo número da operação %s (representação binária s%)\n", value2, binary2);
+    var result = value1 | value2;
+    var binaryResult = Integer.toBinaryString(result);
+    System.out.printf(" %s | %s = %s (rpresentção binária %s)\n", value1, value2, result, binaryResult);
+
+
+
+    }
+}
+
+
+---------------------------------------------------------------------------------------------------------------
+
+Exercícios -------------
+
+01. Escreva um código que receba o nome e o ano de nascimento de alguém e imprima na tela a seguinte mensagem: "Olá 'Fulano' você tem 'X' anos"
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+    Scanner nome = new Scanner(System.in);
+    System.out.println("Olá! Qual é o seu nome? ");
+    String usuario = nome.nextLine();
+    
+   
+    Scanner ano = new Scanner(System.in);
+    System.out.println("Qual ano você nasceu?");    int nascimento = ano.nextInt();
+    int idade = 2025 - nascimento;
+
+    System.out.println("Olá! " + usuario + " você tem " + idade + " anos.");
+
+
+    }
+
+}
+
+
+----------
+
+02. Escreva um código que receba o tamanho do lado de um quadrado, calcule sua área e exiba na tela 
+fórmula: área = lado x lado 
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+   
+        Scanner ladoQuadrado = new Scanner (System.in);
+        System.out.println("Qual é o tamanho do lado do quadrado? "); int lado = ladoQuadrado.nextInt();
+        int area = lado * lado;
+
+        System.out.println("A área do quadrado é igual a " + area);        
+
+
+
+    }
+}
+
+
+------ 
+
+03. Escreva um código que receba a base e a altura de um retângulo, calcule sua área e exiba na tela 
+
+Fórmula: área = base x altura 
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+   
+        Scanner base = new Scanner (System.in);
+        System.out.println("Qual é o tamanho da base do triângulo? "); int baseT = base.nextInt();
+
+        Scanner altura = new Scanner (System.in);
+        System.out.println("Qual é a Altura do triângulo? "); int alturaT = altura.nextInt();
+
+
+        int area = baseT* alturaT;
+
+        System.out.println("A área do triângulo é igual a " + area);        
+
+
+
+    }
+}
+
+
+---------
+
+04. Escreva um código que receba o nome e a idade de 2 pessoas e imprima a diferença de idade entre elas 
+
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+    Scanner nome1 = new Scanner(System.in);
+    System.out.println("Olá! Qual é o seu nome? ");
+    String usuario1 = nome1.nextLine();
+    
+   
+    Scanner ano1 = new Scanner(System.in);
+    System.out.println("Qual ano você nasceu?");    int nascimento1 = ano1.nextInt();
+    int idade1 = 2025 - nascimento1;
+
+    System.out.println("Olá! " + usuario1 + " você tem " + idade1 + " anos.");
+
+    Scanner nome2 = new Scanner(System.in);
+    System.out.println("Olá! Qual é o nome do seu amigo? ");
+    String usuario2 = nome2.nextLine();
+    
+   
+    Scanner ano2 = new Scanner(System.in);
+    System.out.println("Qual ano seu amigo nasceu? ");    int nascimento2 = ano1.nextInt();
+    int idade2 = 2025 - nascimento2;
+
+    System.out.println("Olá! " + usuario2 + " seu amigo tem " + idade2 + " anos.");
+
+
+    int diferenca = idade1 - idade2;
+    System.out.println("A diferença de idade entre vocês é de " + Math.abs(diferenca) + " anos.");
+
+
+    }
+
+}
+
+
