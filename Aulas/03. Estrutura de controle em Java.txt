@@ -1,0 +1,171 @@
+JAVA
+
+**** Estrutura de Controle em Java *****
+
+---------------------------------------------------------------------------------------------------------------
+
+Estrutura Condicional If else e else if -------------
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+    var scanner = new Scanner(System.in);
+
+    System.out.println("Informe seu nome: ");
+    var name =scanner.next();
+
+    System.out.println("Informe sua idade: ");
+    var age =scanner.nextInt();
+    
+    if (age >= 18){
+        System.out.printf("%s, você tem %s anos, e pode dirigir! \n", name, age);
+    } else
+
+    if (age >= 16 && age < 18 ){
+        System.out.println("Você é emancipado? (S/N) ");
+        String resposta = scanner.next();
+
+        if (resposta.equalsIgnoreCase("S") ){
+            System.out.printf("%s, você tem %s anos, e pode dirigir! \n", name, age);
+        } else {
+            System.out.printf("%s, você tem %s anos e não pode dirigir \n", name, age);
+        }
+
+    System.out.println("Fim da execução");
+
+    }
+
+}
+
+}
+
+------------------------------
+
+Estruturas Condicionais switch case --------------------------
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+        System.out.println("Informe um número de um até sete: ");
+        var option = scanner.nextInt();
+        switch (option) {
+            case 1: 
+                System.out.println("Domingo");
+                break;
+            case 2: 
+                System.out.println("Segunda");
+                break;
+            case 3: 
+                System.out.println("Terça");
+                break;
+            case 4: 
+                System.out.println("Quarta");
+                break;
+            case 5: 
+                System.out.println("Quinta");
+                break;
+            case 6: 
+                System.out.println("Sexta");
+                break;
+            case 7: 
+                System.out.println("Sábado");
+                break;
+            default:
+                System.out.println("Opção inválida");
+
+
+        }
+    }
+}
+
+
+
+-----
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+        var option = scanner.nextInt();
+        switch (option){
+            case 1 -> System.out.println("Domingo"); 
+            case 2 -> System.out.println("Segunda-feira"); 
+            case 3 -> System.out.println("Terça-feira"); 
+            case 4 -> System.out.println("Quarta-feira"); 
+            case 5 -> System.out.println("Quinta-feira"); 
+            case 6 -> System.out.println("Sexta-feira"); 
+            case 7 -> System.out.println("Sábado");
+            default -> System.out.println("Opção inválida");
+
+
+        }
+        
+    }
+}
+
+
+
+
+
+Estruturas de Repetição For --------------------------
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        var scanner= new Scanner(System.in);
+        for (;;);
+        System.out.println("Digite um nome: "); 
+        var name = scanner.next(); 
+        
+        if (name.equalsIgnoreCase("exit")) break;
+
+        System.out.println(name);
+
+        }
+    }      
+}
+
+
+
+
+
+----
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        var scanner= new Scanner(System.in);
+        for (var i = 1; i <=100; i ++){
+            if (i == 100){
+                System.out.println("Fim da execução");
+                break;
+
+            }
+        System.out.println(i); 
+       
+        }
+    }      
+}
+
+
+
+
+
+
+
+
